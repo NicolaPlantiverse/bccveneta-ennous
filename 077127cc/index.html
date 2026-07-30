@@ -108,14 +108,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:cent
  background:rgba(4,7,10,.5);border:1px solid var(--line);border-radius:28px;padding:30px 34px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 #team.on{opacity:1;pointer-events:auto}
 #team .tm{text-align:center;width:162px;cursor:default}
-#team .tm img{width:116px;height:116px;border-radius:50%;object-fit:cover;object-position:50% 4%;border:1.5px solid var(--ac,var(--env));box-shadow:0 0 30px -6px var(--ac,var(--env));filter:grayscale(.28);
- transition:transform .35s ease,box-shadow .35s ease,filter .35s ease}
+#team .tm .av{width:116px;height:116px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;
+ font-family:ui-serif,Georgia,serif;font-size:38px;font-weight:600;color:var(--ac,var(--env));background:rgba(255,255,255,.04);
+ border:1.5px solid var(--ac,var(--env));box-shadow:0 0 30px -6px var(--ac,var(--env));
+ transition:transform .35s ease,box-shadow .35s ease}
 /* hover sul nome o sulla card: il cerchio si "ignize" come i nodi della rete al passaggio del mouse */
-#team .tm:hover img{transform:scale(1.14);filter:grayscale(0);box-shadow:0 0 52px -2px var(--ac,var(--env))}
+#team .tm:hover .av{transform:scale(1.14);box-shadow:0 0 52px -2px var(--ac,var(--env))}
 #team .tm .n{font-size:14px;font-weight:700;margin-top:14px;white-space:nowrap;transition:color .3s}
 #team .tm:hover .n{color:var(--ac,var(--env))}
 #team .tm .r{font-size:11.5px;color:var(--ac,var(--txt2));margin-top:3px;font-weight:600}
-@media(max-width:640px){#team{gap:14px;flex-wrap:wrap;justify-content:center;max-width:380px;padding:20px}#team .tm{width:148px}#team .tm img{width:100px;height:100px}}
+@media(max-width:640px){#team .tm .av{width:100px;height:100px;font-size:32px}}
+@media(max-width:640px){#team{gap:14px;flex-wrap:wrap;justify-content:center;max-width:380px;padding:20px}#team .tm{width:148px}}
 
 /* barra di avanzamento capitoli */
 #bar{position:fixed;left:0;right:0;bottom:0;z-index:22;display:flex;gap:6px;padding:16px 30px}
@@ -203,11 +206,11 @@ Un&#8217;intelligenza con la <b>forma della tua azienda</b>: accende solo i <b>m
 <div id="obj"><span class="dot"></span><span id="objName"></span></div>
 
 <div id="team">
-  <div class="tm" style="--ac:var(--env)"><img src="assets/team/nn.jpg" alt="Nicola Nescatelli" loading="lazy"><div class="n">Nicola Nescatelli</div><div class="r">Founder &amp; CEO</div></div>
-  <div class="tm" style="--ac:var(--geo)"><img src="assets/team/ap.jpg" alt="Andrea Procaccini" loading="lazy"><div class="n">Andrea Procaccini</div><div class="r">AI &amp; Modelling</div></div>
-  <div class="tm" style="--ac:var(--teal)"><img src="assets/team/lg.jpg" alt="Leonardo Giannini" loading="lazy"><div class="n">Leonardo Giannini</div><div class="r">Geospatial &amp; EO</div></div>
-  <div class="tm" style="--ac:var(--violet)"><img src="assets/team/fp.jpg" alt="Fabio Pallini" loading="lazy"><div class="n">Fabio Pallini</div><div class="r">IT Solution Architect</div></div>
-  <div class="tm" style="--ac:var(--amber)"><img src="assets/team/fd.jpg" alt="Federico Di Vincenzo" loading="lazy"><div class="n">Federico Di Vincenzo</div><div class="r">Design &amp; Experience</div></div>
+  <div class="tm" style="--ac:var(--env)"><div class="av" aria-hidden="true">N</div><div class="n">Nicola Nescatelli</div><div class="r">Founder &amp; CEO</div></div>
+  <div class="tm" style="--ac:var(--geo)"><div class="av" aria-hidden="true">A</div><div class="n">Andrea Procaccini</div><div class="r">AI &amp; Modelling</div></div>
+  <div class="tm" style="--ac:var(--teal)"><div class="av" aria-hidden="true">L</div><div class="n">Leonardo Giannini</div><div class="r">Geospatial &amp; EO</div></div>
+  <div class="tm" style="--ac:var(--violet)"><div class="av" aria-hidden="true">F</div><div class="n">Fabio Pallini</div><div class="r">IT Solution Architect</div></div>
+  <div class="tm" style="--ac:var(--amber)"><div class="av" aria-hidden="true">F</div><div class="n">Federico Di Vincenzo</div><div class="r">Design &amp; Experience</div></div>
 </div>
 
 <div id="bar"></div>
