@@ -481,9 +481,9 @@ var playBox=document.getElementById('play'),kick=document.getElementById('kick')
     synthBox=document.getElementById('synth');
 var C=ENGINE.colors;
 
-/* ===== lingua: IT default, EN per i mercati esteri; struttura pronta per altre lingue ===== */
+/* ===== lingua: italiano di default sempre, inglese solo se scelto esplicitamente ===== */
 var LANG=(function(){try{var s=localStorage.getItem('eb_lang');if(s==='it'||s==='en')return s;}catch(e){}
- return ((navigator.language||'it').toLowerCase().indexOf('it')===0)?'it':'en';})();
+ return 'it';})();
 function TT(o,f){return (LANG==='en'&&o[f+'_en']!=null)?o[f+'_en']:o[f];}
 var UI={
  it:{reti:'Le reti',sintesi:'Sintesi',pilot:'Avvia un pilota →',hint:'Scorri verso il basso · una schermata alla volta',
